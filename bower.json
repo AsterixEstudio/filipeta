@@ -1,0 +1,14 @@
+{
+  "name": "wall",
+  "version": "0.0.1",
+  "homepage": "https://github.com/leonardocamelo/wall",
+  "description": "Mural colaborativo",
+  "main": "client/main.html",
+  "authors": [
+    "Leonardo Camelo <leonardocamelo.nave@gmail.com>"
+  ],
+  "private": true,
+  "dependencies": {
+    "normalize.css": "~3.0.3"
+  }
+}

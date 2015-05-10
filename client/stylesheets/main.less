@@ -1,0 +1,40 @@
+@dark: #333;
+@light: #fff;
+@bg: @light;
+@pri: #e74c3c;
+
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body{
+  background-color: @bg;
+  color: @dark;
+}
+body *{ font-weight: lighter!important; }
+h1{
+  background-color: @pri;
+  color: @light;
+  margin: 0;
+  padding: .5em 0;
+  text-align: center;
+}
+main{ padding: 15px; }
+input, textarea{
+  display: block;
+  margin-bottom: 12px;
+  padding: 8px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px darken(@light, 20%) solid;
+}
+input[type=submit]{
+  color: @pri;
+  border: 1px @pri solid;
+  background-color: @bg;
+}
+textarea{
+  resize: none;
+  height: 120px;
+}

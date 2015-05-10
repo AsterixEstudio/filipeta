@@ -1,0 +1,32 @@
+<head>
+  <title>wall</title>
+</head>
+
+<body>
+  <h1>Bem vindo ao maravilhoso Wall!</h1>
+  <main>
+    {{> newCard}}
+    <ul>
+      {{#each cards}}
+      {{> card}}
+      {{/each}}
+    </ul>
+  </main>
+</body>
+
+<template name="newCard">
+  <h2>Novo card</h2>
+  <form>
+    <label>Título
+      <input type="text" name="title" placeholder="algo único">
+    </label>
+    <label>Texto
+      <textarea name="text" maxlength="140" placeholder="ideias anônimas"></textarea>
+    </label>
+    <input type="submit" value="Publicar">
+  </form>
+</template>
+
+<template name="card">
+  <li>yo!</li>
+</template>
