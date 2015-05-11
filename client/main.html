@@ -3,14 +3,12 @@
 </head>
 
 <body>
-  <h1>Bem vindo ao maravilhoso Wall!</h1>
-  <main>
+  <h1>Bem vindo ao maravilhoso wall!</h1>
+  <aside>
     {{> newCard}}
-    <ul>
-      {{#each cards}}
-      {{> card}}
-      {{/each}}
-    </ul>
+  </aside>
+  <main>
+    {{> cards}}
   </main>
 </body>
 
@@ -18,15 +16,23 @@
   <h2>Novo card</h2>
   <form>
     <label>Título
-      <input type="text" name="title" placeholder="algo único">
+      <input type="text" name="title" placeholder="algo único" required>
     </label>
     <label>Texto
-      <textarea name="text" maxlength="140" placeholder="ideias anônimas"></textarea>
+      <textarea name="text" maxlength="140" placeholder="ideias anônimas" required></textarea>
     </label>
     <input type="submit" value="Publicar">
   </form>
 </template>
 
-<template name="card">
-  <li>yo!</li>
+<template name="cards">
+  {{#each cards}}
+  <article>
+    <div>
+      <h3>{{title}}<small>{{formatDate cratedAt}}</small></h3>
+      <p>{{text}}</p>
+    </div>
+  </article>
+  {{/each}}
+  <br>
 </template>

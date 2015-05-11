@@ -1,7 +1,15 @@
 @dark: #333;
 @light: #fff;
 @bg: @light;
-@pri: #e74c3c;
+@alt: darken(@bg, 20%);
+//@pri: #e74c3c; // tema vermelho
+@pri: #3f51b5; // tema roxo
+
+.border-radius(@radius){
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
 
 *{
   -webkit-box-sizing: border-box;
@@ -13,6 +21,7 @@ body{
   color: @dark;
 }
 body *{ font-weight: lighter!important; }
+br{ clear: both; }
 h1{
   background-color: @pri;
   color: @light;
@@ -20,21 +29,54 @@ h1{
   padding: .5em 0;
   text-align: center;
 }
-main{ padding: 15px; }
+main{ padding: 30px 20px; }
 input, textarea{
   display: block;
   margin-bottom: 12px;
   padding: 8px;
   width: 100%;
-  max-width: 300px;
-  border: 1px darken(@light, 20%) solid;
+  background-color: @bg;
+  border: 1px @alt solid;
+  .border-radius(1.5px);
 }
 input[type=submit]{
   color: @pri;
   border: 1px @pri solid;
-  background-color: @bg;
 }
 textarea{
   resize: none;
   height: 120px;
+}
+aside, article{
+  float: left;
+  width: 25%;
+}
+aside{ padding: 26px; }
+article{
+  padding: 6px;
+  div{
+    border: 1px @alt solid;
+    .border-radius(1.5px);
+    h3, p{
+      margin: 0;
+      padding: 9px;
+    }
+    h3{
+      color: @pri;
+      font-size: .85em;
+    }
+    p{ font-size: .95em; }
+    small{
+      float: right;
+      color: @alt;
+    }
+    &:hover{
+      border-color: @pri;
+      h3{
+        background-color: @pri;
+        color: @light;
+        small{ color: @light; }
+      }
+    }
+  }
 }
