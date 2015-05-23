@@ -1,7 +1,7 @@
 {
-  "name": "wall",
+  "name": "filipeta",
   "version": "0.0.1",
-  "homepage": "https://github.com/leonardocamelo/wall",
+  "homepage": "https://github.com/leonardocamelo/filipeta",
   "description": "Mural colaborativo",
   "main": "client/main.html",
   "authors": [
