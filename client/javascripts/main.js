@@ -2,7 +2,7 @@ Meteor.subscribe('cards');
 
 Template.cards.helpers({
   cards: function(){
-    return Cards.find({}, {sort:{createdAt: -1}});
+    return Cards.find({}, { sort: {createdAt: -1} });
   }
 });
 
